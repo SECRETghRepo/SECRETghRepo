@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 80px;
-  background-color: cyan;
+  background-color: blue;
 }
 
 .NavbarItem{
@@ -13,11 +13,12 @@
   position: relative;
   background-color: white;
   border-radius: 10px;
-  transition: border-radius 0.2s;
+  transition: all 0.2s;
 }
 
 .NavbarItem:hover{
   border-radius: 0;
+  background-color: white;
 }
 
 .NavbarItem::after{
@@ -30,7 +31,7 @@
   width: 100%;
   transform: scaleX(0);
   height: 5px;
-  background-color: blue;
+  background-color: white;
   transition: transform 0.2s ease-in;
 }
 
@@ -42,7 +43,12 @@
   content: '';
   transform: scaleX(1);
   height: 5px;
-  background-color:blue;
+  background-color:white;
+}
+
+.active{
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 a{
@@ -54,4 +60,71 @@ a{
 
 a:first-child{
   justify-self: flex-start;
+}
+
+
+.Matrix{
+  background-color: rgb(255, 255, 255);
+  row-gap: 0;
+}
+
+.MatrixRow input{
+  display: block;
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
+}
+
+.Tree{
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 200);
+  width: 100vw;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.Matrix{
+  margin: 50px;
+  margin-top: 10px;
+  height: 100%;
+  width: max-content;
+  align-self: center;
+  min-width: max-content;
+  border: 15px solid inherit;
+  border-radius: 20px;
+}
+
+.Button{
+  color: aliceblue;
+  background-color: blue;
+  margin: 20px auto 20px auto;
+  height:60px;
+  width: 200px;
+  left: 0;
+  justify-self: center;
+  right: 0;
+  border-radius: 20px;
+  transition: all 0.2s; 
+  font-weight: bold;
+  border: 3px solid blue;
+  font-family: monospace;
+  cursor: pointer;
+} 
+
+.Button:hover{
+  border-radius: 0;
+  border: 3px solid white;
+  color: blue;
+  background-color:white;
+}
+
+.ButtonDiv{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+p{
+  margin: 0;
 }

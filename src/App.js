@@ -8,9 +8,9 @@ function App() {
   return (
     <div className='App'>
       <BrowserRouter>
+          <Navbar/>
           <Switch>
-            <Navbar/>
-            <Route exact path = '/tree'>
+            <Route exact path = '/matrix-to-tree'>
               <Tree />
             </Route>
             <Route exact path = '/home'>

@@ -1,9 +1,9 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 
-function NavbarItem( {text, link} ){
+function NavbarItem( {text, link, onclick} ){
     var nb_Item = (
-        <div className = 'NavbarItem'>
+        <div className = 'NavbarItem' onClick = {onclick}>
             <NavLink exact to = { link }> { text } </NavLink>
         </div>
     )
@@ -15,7 +15,7 @@ export const Navbar = () => {
     return (
         <div className = 'Navbar'>
             <NavbarItem text = 'HOME' link = '/'/>
-            <div style ={{ backgroundColor: 'blue', height: 60, width: '1px', border: 'solid 2px blue' ,borderRadius: 10, margin: '0 15px'}} ></div>
+            <div style ={{ backgroundColor: 'white', height: 60, width: '1px', border: 'solid 2px white' ,borderRadius: 10, margin: '0 15px'}} ></div>
             <NavbarItem text = 'SORTING ALGRITHMS' link = '/sorting-algorithms'/>
             <NavbarItem text = 'MATRIX TO TREE' link = '/matrix-to-tree'/>
             <NavbarItem text = 'GRAPH TO MATRIX' link = '/graph-to-matrix'/>
@@ -26,4 +26,5 @@ export const Navbar = () => {
 NavbarItem.defaulProps = {
     text: "link",
     link: '/',
+    onclick: () => {console.log( 'clicked', this.text)}
 }
